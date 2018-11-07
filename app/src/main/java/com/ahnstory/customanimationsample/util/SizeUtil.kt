@@ -16,6 +16,14 @@ data class Size(val width: Int, val height: Int) {
         }
 }
 
-inline fun Rect.getSize(): Size {
+operator fun Size.times(value: Float): Size {
+    return Size((width * value).toInt(), (height * value).toInt())
+}
+
+operator fun Size.div(scale: Float): Size {
+    return Size((width / scale).toInt(), (height / scale).toInt())
+}
+
+fun Rect.getSize(): Size {
     return Size(width(), height())
 }
