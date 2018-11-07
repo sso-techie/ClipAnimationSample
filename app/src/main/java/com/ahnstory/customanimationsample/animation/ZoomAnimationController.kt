@@ -16,7 +16,7 @@ import com.ahnstory.customanimationsample.widget.CroppedImageView
  */
 class ZoomAnimationController(private val view: CroppedImageView, startRect: Rect, private val viewRect: Rect, imageSize: Size) {
     companion object {
-        const val DURATION = 3000L
+        const val DURATION = 300L
     }
 
     private val startViewRect: RectF
